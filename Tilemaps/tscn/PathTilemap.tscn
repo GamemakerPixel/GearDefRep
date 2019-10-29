@@ -1,0 +1,57 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Sprites/PathTilemapTA.png" type="Texture" id=1]
+
+[sub_resource type="NavigationPolygon" id=1]
+vertices = PoolVector2Array( 15, 1, 15, 0, 17, 0, 17, 1, 19, 1, 19, 2, 21, 2, 21, 3, 23, 3, 23, 4, 25, 4, 25, 5, 27, 5, 27, 6, 29, 6, 29, 7, 31, 7, 31, 8, 32, 8, 32, 9, 31, 9, 31, 10, 29, 10, 29, 11, 27, 11, 27, 12, 25, 12, 25, 13, 23, 13, 23, 14, 21, 14, 21, 15, 19, 15, 13, 2, 19, 16, 17, 16, 11, 3, 11, 2, 17, 17, 15, 17, 15, 16, 13, 16, 13, 15, 11, 15, 11, 14, 9, 14, 9, 13, 7, 13, 7, 12, 9, 4, 5, 12, 5, 11, 7, 5, 3, 11, 3, 10, 5, 6, 1, 10, 1, 9, 3, 7, 0, 9, 0, 8, 1, 8, 1, 7, 3, 6, 5, 5, 7, 4, 9, 3, 13, 1 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ), PoolIntArray( 3, 4, 5 ), PoolIntArray( 5, 6, 7 ), PoolIntArray( 7, 8, 9 ), PoolIntArray( 9, 10, 11 ), PoolIntArray( 11, 12, 13 ), PoolIntArray( 13, 14, 15 ), PoolIntArray( 15, 16, 17 ), PoolIntArray( 17, 18, 19, 20 ), PoolIntArray( 15, 20, 21, 22, 13 ), PoolIntArray( 13, 22, 23, 24, 11 ), PoolIntArray( 11, 24, 25, 26, 9 ), PoolIntArray( 9, 26, 27, 28, 7 ), PoolIntArray( 7, 28, 29, 30, 5 ), PoolIntArray( 0, 3, 5, 30, 31, 32, 33 ), PoolIntArray( 33, 32, 34, 35, 36, 37 ), PoolIntArray( 35, 38, 39, 40 ), PoolIntArray( 40, 41, 42 ), PoolIntArray( 42, 43, 44 ), PoolIntArray( 44, 45, 46, 36 ), PoolIntArray( 46, 47, 48, 49, 36 ), PoolIntArray( 48, 50, 51, 52, 49 ), PoolIntArray( 51, 53, 54, 55, 52 ), PoolIntArray( 54, 56, 57, 58, 55 ), PoolIntArray( 57, 59, 60, 61 ), PoolIntArray( 61, 62, 58 ), PoolIntArray( 58, 63, 55 ), PoolIntArray( 55, 64, 52 ), PoolIntArray( 52, 65, 49 ), PoolIntArray( 49, 66, 36 ), PoolIntArray( 33, 67, 0 ), PoolIntArray( 15, 17, 20 ), PoolIntArray( 36, 35, 40, 42 ), PoolIntArray( 36, 42, 44 ), PoolIntArray( 58, 57, 61 ) ]
+outlines = [ PoolVector2Array( 15, 0, 17, 0, 17, 1, 19, 1, 19, 2, 21, 2, 21, 3, 23, 3, 23, 4, 25, 4, 25, 5, 27, 5, 27, 6, 29, 6, 29, 7, 31, 7, 31, 8, 32, 8, 32, 9, 31, 9, 31, 10, 29, 10, 29, 11, 27, 11, 27, 12, 25, 12, 25, 13, 23, 13, 23, 14, 21, 14, 21, 15, 19, 15, 19, 16, 17, 16, 17, 17, 15, 17, 15, 16, 13, 16, 13, 15, 11, 15, 11, 14, 9, 14, 9, 13, 7, 13, 7, 12, 5, 12, 5, 11, 3, 11, 3, 10, 1, 10, 1, 9, 0, 9, 0, 8, 1, 8, 1, 7, 3, 7, 3, 6, 5, 6, 5, 5, 7, 5, 7, 4, 9, 4, 9, 3, 11, 3, 11, 2, 13, 2, 13, 1, 15, 1 ) ]
+
+[node name="PathTilemap" type="Node2D"]
+
+[node name="0" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 32, 32 )
+
+[node name="0" type="StaticBody2D" parent="0"]
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="0/0"]
+navpoly = SubResource( 1 )
+
+[node name="1" type="Sprite" parent="."]
+position = Vector2( 32, 0 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 32, 0, 32, 32 )
+
+[node name="1" type="StaticBody2D" parent="1"]
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="1/1"]
+navpoly = SubResource( 1 )
+
+[node name="2" type="Sprite" parent="."]
+position = Vector2( 64, 0 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 32, 32, 32 )
+
+[node name="2" type="StaticBody2D" parent="2"]
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="2/2"]
+navpoly = SubResource( 1 )
+
+[node name="3" type="Sprite" parent="."]
+position = Vector2( 96, 0 )
+texture = ExtResource( 1 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 32, 32, 32, 32 )
+
+[node name="3" type="StaticBody2D" parent="3"]
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="3/3"]
+navpoly = SubResource( 1 )
