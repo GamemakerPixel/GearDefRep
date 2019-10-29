@@ -1,42 +1,40 @@
 [gd_scene load_steps=57 format=2]
 
 [ext_resource path="res://GearDefRep/Scripts/Map.gd" type="Script" id=1]
-[ext_resource path="res://Sprites/TilemapTA.png" type="Texture" id=2]
-[ext_resource path="res://Sprites/PathTilemapTA.png" type="Texture" id=3]
+[ext_resource path="res://GearDefRep/Sprites/TilemapTA.png" type="Texture" id=2]
+[ext_resource path="res://GearDefRep/Sprites/PathTilemapTA.png" type="Texture" id=3]
 [ext_resource path="res://GearDefRep/Characters/Enemy.tscn" type="PackedScene" id=4]
 [ext_resource path="res://GearDefRep/SpecialTiles/MonsterSpawner.tscn" type="PackedScene" id=5]
 [ext_resource path="res://GearDefRep/SpecialTiles/Castle.tscn" type="PackedScene" id=6]
 [ext_resource path="res://GearDefRep/Scripts/ControlPanel.gd" type="Script" id=7]
 [ext_resource path="res://GearDefRep/Fonts/DecoTech.otf" type="DynamicFontData" id=8]
-[ext_resource path="res://Sprites/DefaultBiuldings/Miner/pngFrames/tile000.png" type="Texture" id=9]
-[ext_resource path="res://Sprites/CoinIcon.png" type="Texture" id=10]
-[ext_resource path="res://Sprites/Icons/Biulding Creation/tile000.png" type="Texture" id=11]
-[ext_resource path="res://Sprites/Icons/Biulding Creation/tile002.png" type="Texture" id=12]
-[ext_resource path="res://Sprites/Icons/Biulding Creation/tile001.png" type="Texture" id=13]
+[ext_resource path="res://GearDefRep/Sprites/DefaultBiuldings/Miner/pngFrames/tile000.png" type="Texture" id=9]
+[ext_resource path="res://GearDefRep/Sprites/CoinIcon.png" type="Texture" id=10]
+[ext_resource path="res://GearDefRep/Sprites/Icons/Biulding Creation/tile000.png" type="Texture" id=11]
+[ext_resource path="res://GearDefRep/Sprites/Icons/Biulding Creation/tile002.png" type="Texture" id=12]
+[ext_resource path="res://GearDefRep/Sprites/Icons/Biulding Creation/tile001.png" type="Texture" id=13]
 [ext_resource path="res://GearDefRep/Scripts/Templates.gd" type="Script" id=14]
-[ext_resource path="res://Sprites/Icons/Biulding Creation/tile003.png" type="Texture" id=15]
+[ext_resource path="res://GearDefRep/Sprites/Icons/Biulding Creation/tile003.png" type="Texture" id=15]
 [ext_resource path="res://GearDefRep/Scripts/TemplateButton.gd" type="Script" id=16]
-[ext_resource path="res://Sprites/Icons/Biulding Creation/TowerIcons/tile001.png" type="Texture" id=17]
+[ext_resource path="res://GearDefRep/Sprites/Icons/Biulding Creation/TowerIcons/tile001.png" type="Texture" id=17]
 [ext_resource path="res://GearDefRep/Scripts/Stats.gd" type="Script" id=18]
-[ext_resource path="res://Sprites/HealthIcon.png" type="Texture" id=19]
+[ext_resource path="res://GearDefRep/Sprites/HealthIcon.png" type="Texture" id=19]
 [ext_resource path="res://GearDefRep/Maps/CreateScreen.gd" type="Script" id=20]
-[ext_resource path="res://Sprites/BlueprintPhoto.jpg" type="Texture" id=21]
-[ext_resource path="res://Sprites/Icons/Biulding Creation/Splash.png" type="Texture" id=22]
-[ext_resource path="res://Sprites/Icons/Biulding Creation/Single.png" type="Texture" id=23]
-[ext_resource path="res://Sprites/Icons/Biulding Creation/Double.png" type="Texture" id=24]
-[ext_resource path="res://Sprites/Icons/Biulding Creation/Full.png" type="Texture" id=25]
-[ext_resource path="res://Sprites/Icons/Biulding Creation/tile011.png" type="Texture" id=26]
-[ext_resource path="res://Sprites/Icons/Biulding Creation/tile012.png" type="Texture" id=27]
-[ext_resource path="res://Sprites/Icons/Biulding Creation/tile013.png" type="Texture" id=28]
-[ext_resource path="res://Sprites/Icons/Biulding Creation/tile014.png" type="Texture" id=29]
-[ext_resource path="res://Sprites/Icons/Biulding Creation/tile015.png" type="Texture" id=30]
+[ext_resource path="res://GearDefRep/Sprites/BlueprintPhoto.jpg" type="Texture" id=21]
+[ext_resource path="res://GearDefRep/Sprites/Icons/Biulding Creation/Splash.png" type="Texture" id=22]
+[ext_resource path="res://GearDefRep/Sprites/Icons/Biulding Creation/Single.png" type="Texture" id=23]
+[ext_resource path="res://GearDefRep/Sprites/Icons/Biulding Creation/Double.png" type="Texture" id=24]
+[ext_resource path="res://GearDefRep/Sprites/Icons/Biulding Creation/Full.png" type="Texture" id=25]
+[ext_resource path="res://GearDefRep/Sprites/Icons/Biulding Creation/tile011.png" type="Texture" id=26]
+[ext_resource path="res://GearDefRep/Sprites/Icons/Biulding Creation/tile012.png" type="Texture" id=27]
+[ext_resource path="res://GearDefRep/Sprites/Icons/Biulding Creation/tile013.png" type="Texture" id=28]
+[ext_resource path="res://GearDefRep/Sprites/Icons/Biulding Creation/tile014.png" type="Texture" id=29]
+[ext_resource path="res://GearDefRep/Sprites/Icons/Biulding Creation/tile015.png" type="Texture" id=30]
 [ext_resource path="res://GearDefRep/Scripts/StatSlider.gd" type="Script" id=31]
 [ext_resource path="res://GearDefRep/Scripts/Towers.gd" type="Script" id=32]
-[ext_resource path="res://Sprites/Grid.png" type="Texture" id=33]
+[ext_resource path="res://GearDefRep/Sprites/Grid.png" type="Texture" id=33]
 [ext_resource path="res://GearDefRep/Scripts/MouseAttachments.gd" type="Script" id=34]
-[ext_resource path="res://Sprites/MouseAttachments/RangeCircle.png" type="Texture" id=35]
-
-
+[ext_resource path="res://GearDefRep/Sprites/MouseAttachments/RangeCircle.png" type="Texture" id=35]
 
 [sub_resource type="TileSet" id=1]
 0/name = "TilemapTA.png 0"
@@ -1369,7 +1367,6 @@ margin_bottom = 336.0
 min_value = 1.0
 max_value = 20.0
 value = 2.0
-ticks_on_borders = false
 script = ExtResource( 31 )
 
 [node name="+" type="Button" parent="ControlPanel/CreateScreen/Sliders/DamageSlider"]
@@ -1393,7 +1390,7 @@ text = "-"
 flat = true
 
 [node name="Label" type="Label" parent="ControlPanel/CreateScreen/Sliders/DamageSlider"]
-margin_left = 9.53674e-007
+margin_left = 9.53674e-07
 margin_top = -12.6666
 margin_right = 261.0
 margin_bottom = 4.33337
@@ -1420,7 +1417,6 @@ margin_bottom = 336.0
 min_value = 1.0
 max_value = 4.0
 value = 3.0
-ticks_on_borders = false
 script = ExtResource( 31 )
 
 [node name="+" type="Button" parent="ControlPanel/CreateScreen/Sliders/SpeedSlider"]
@@ -1469,7 +1465,6 @@ margin_bottom = 378.667
 min_value = 1.0
 max_value = 7.0
 value = 2.0
-ticks_on_borders = false
 script = ExtResource( 31 )
 
 [node name="+" type="Button" parent="ControlPanel/CreateScreen/Sliders/RangeSlider"]
