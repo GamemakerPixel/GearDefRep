@@ -12,5 +12,5 @@ func setMouseMode(mode):
 	if mode == 0:
 		Input.set_custom_mouse_cursor(null)
 	elif mode == 1:
-		Input.set_custom_mouse_cursor(preload("res://Sprites/Icons/Mouse Cursors/TowerCreate.png"))
+		Input.set_custom_mouse_cursor(preload("res://GearDefRep/Sprites/Icons/Mouse Cursors/TowerCreate.png"))
 	mouseMode = mode
