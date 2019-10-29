@@ -5,7 +5,7 @@ export (PoolVector3Array) var entityMap = []
 
 var currentMob = 0
 
-onready var enemy = preload("res://Characters/Enemy.tscn")
+onready var enemy = preload("res://GearDefRep/Characters/Enemy.tscn")
 
 var mousedTileCoordinates = Vector2()
 var mousedTileType
@@ -64,5 +64,5 @@ func _on_Button_pressed():
 	$ControlPanel/CreateScreen.hide()
 
 func placeTower(template_):
-	var t = preload("res://Characters/Tower.tscn").instance()
+	var t = preload("res://GearDefRep/Characters/Tower.tscn").instance()
 	t.setData(template_, get_global_mouse_position())
