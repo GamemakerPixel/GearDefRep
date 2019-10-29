@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://GearDefRep/Scripts/Castle.gd" type="Script" id=1]
+[ext_resource path="res://Sprites/GearDef Castle.png" type="Texture" id=2]
+
+
+[node name="Castle" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 160, 160 )
+
+[node name="EnemyDetect" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( 80, 80, 0, 120, 80, 160, 160, 120 )
+
+[node name="EndingPos" type="Position2D" parent="."]
+position = Vector2( 128, 96 )
