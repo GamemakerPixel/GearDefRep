@@ -2,7 +2,7 @@ extends Node
 
 const PLAYTEST_MODE = true
 #Total Run Time, TowerTemplatesUsed
-const PLAYTEST_SPECIFICATIONS = [false, true]
+const PLAYTEST_SPECIFICATIONS = [true, true]
 
 var content = []
 var playtime = 0
