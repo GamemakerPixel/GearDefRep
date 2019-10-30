@@ -33,7 +33,7 @@ func savePlaytestData():
 	print("Saving...")
 	var file = File.new()
 	print("File - " + str(file))
-	var date = ProjectSettings.get_setting("Application/playTestDate")
+	var date = ProjectSettings.get_setting("Application/play_test_date")
 	var version = ProjectSettings.get_setting("Application/version")
 	file.open("res://GearDefRep/PlaytesterData/playtest_data_" + version + "_" + date + ".txt", File.WRITE)
 	file.store_string(str(content))
