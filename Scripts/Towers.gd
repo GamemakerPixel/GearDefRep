@@ -3,7 +3,7 @@ extends YSort
 var currentTemplate = null
 
 func placeTower(templateInt, _position):
-	var tower = preload("res://Characters/Tower.tscn")
+	var tower = preload("res://GearDefRep/Characters/Tower.tscn")
 	var t = tower.instance()
 	add_child(t)
 	t.setData(GlobalVariables.biuldingTemplates[templateInt], _position)
