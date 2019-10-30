@@ -232,6 +232,7 @@ tracks/1/keys = {
 font_data = ExtResource( 8 )
 
 [sub_resource type="DynamicFont" id=10]
+size = 19
 font_data = ExtResource( 8 )
 
 [sub_resource type="StyleBoxEmpty" id=11]
@@ -470,7 +471,6 @@ texture_pressed = ExtResource( 12 )
 texture_hover = ExtResource( 13 )
 
 [node name="Templates" type="Node2D" parent="ControlPanel/ColorRect"]
-editor/display_folded = true
 script = ExtResource( 14 )
 
 [node name="Template0" type="Sprite" parent="ControlPanel/ColorRect/Templates"]
