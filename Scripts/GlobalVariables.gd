@@ -2,6 +2,7 @@ extends Node
 
 var content = []
 var playtime = 0
+var CompPlaytime = 0
 
 const DEFAULT_HEALTH = 100
 const DEFAULT_MONEY = 200
@@ -13,6 +14,7 @@ var biuldingTemplates = []
 
 func _process(delta):
 	playtime += delta
+	CompPlaytime = round(playtime * 100) / 100
 
 func setMouseMode(mode):
 	if mode == 0:
@@ -35,5 +37,4 @@ func savePlaytestData():
 	file.close()
 
 func compileData():
-	var CompPlaytime = round(playtime * 100) / 100
 	content.append("Total Play Frames: " + str(CompPlaytime) + str(" seconds"))
