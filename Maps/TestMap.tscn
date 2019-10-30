@@ -1390,7 +1390,7 @@ text = "-"
 flat = true
 
 [node name="Label" type="Label" parent="ControlPanel/CreateScreen/Sliders/DamageSlider"]
-margin_left = 9.53674e-007
+margin_left = 9.53674e-07
 margin_top = -12.6666
 margin_right = 261.0
 margin_bottom = 4.33337
