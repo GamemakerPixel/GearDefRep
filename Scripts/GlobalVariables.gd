@@ -36,16 +36,21 @@ func savePlaytestData():
 	compileData()
 	var file = File.new()
 	var OSdate = OS.get_date()
+	var OStime = OS.get_time()
+	var time = str(OStime.hour) + "-" + str(OStime.minute)
 	var ComputerName = OS.get_name()
 	print(ComputerName)
 	var date = str(OSdate.month) + "_" + str(OSdate.day) + "_" + str(OSdate.year)
 	var version = ProjectSettings.get_setting("Application/version")
-	file.open("res://GearDefRep/PlaytesterData/" + ComputerName + "/playtest_data_" + version + "_" + date + ".txt", File.WRITE)
+	file.open("res://GearDefRep/PlaytesterData/" + ComputerName + "/playtest_data_" + version + "_" + date + "_" + time + ".txt", File.WRITE)
 	file.store_string(str(content))
 	file.close()
 func compileData():
 	if PLAYTEST_SPECIFICATIONS[0]:
 		content.append("Total Play Frames: " + str(CompPlaytime) + str(" seconds"))
 	if PLAYTEST_SPECIFICATIONS[1]:
-		for template in templatesUtilized:
-			content.append("Tower Created - " + str(template[0]) + " - at time " + str(template[1]))
+		if templatesUtilized.size() != 0:
+			for template in templatesUtilized:
+				content.append("Tower Created - " + str(template[0]) + " - at time " + str(template[1]))
+		else:
+			content.append("Tower Created - null")
