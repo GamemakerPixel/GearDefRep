@@ -1,1 +1,0 @@
-[Total Play Frames: 11.76 seconds, Tower Created - [1, 0, 2, 3, 7, 185] - at time 8.52]
