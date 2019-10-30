@@ -1153,7 +1153,6 @@ custom_styles/focus = SubResource( 11 )
 flat = true
 
 [node name="Stats" type="Node2D" parent="ControlPanel/ColorRect"]
-editor/display_folded = true
 script = ExtResource( 18 )
 
 [node name="Health" type="Label" parent="ControlPanel/ColorRect/Stats"]
@@ -1366,7 +1365,6 @@ margin_bottom = 336.0
 min_value = 1.0
 max_value = 20.0
 value = 2.0
-ticks_on_borders = true
 script = ExtResource( 31 )
 
 [node name="+" type="Button" parent="ControlPanel/CreateScreen/Sliders/DamageSlider"]
@@ -1390,7 +1388,7 @@ text = "-"
 flat = true
 
 [node name="Label" type="Label" parent="ControlPanel/CreateScreen/Sliders/DamageSlider"]
-margin_left = 9.53674e-007
+margin_left = 9.53674e-07
 margin_top = -12.6666
 margin_right = 261.0
 margin_bottom = 4.33337
@@ -1417,7 +1415,6 @@ margin_bottom = 336.0
 min_value = 1.0
 max_value = 4.0
 value = 3.0
-ticks_on_borders = true
 script = ExtResource( 31 )
 
 [node name="+" type="Button" parent="ControlPanel/CreateScreen/Sliders/SpeedSlider"]
