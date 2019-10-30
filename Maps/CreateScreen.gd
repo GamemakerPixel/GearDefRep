@@ -1,7 +1,7 @@
 extends ColorRect
 
-var activeButton = preload("res://Sprites/Icons/Biulding Creation/tile004.png")
-var inactiveButton = preload("res://Sprites/Icons/Biulding Creation/tile003.png")
+var activeButton = preload("res://GearDefRep/Sprites/Icons/Biulding Creation/tile004.png")
+var inactiveButton = preload("res://GearDefRep/Sprites/Icons/Biulding Creation/tile003.png")
 
 var currentBase
 var currentElement
@@ -28,15 +28,15 @@ func clearButtons(type):
 		$Bases/Full.texture_normal = inactiveButton
 	if type == "Elements":
 		$Elements/Fire.texture_normal = inactiveButton
-		$Elements/Fire/Sprite.texture = preload("res://Sprites/Icons/Biulding Creation/tile011.png")
+		$Elements/Fire/Sprite.texture = preload("res://GearDefRep/Sprites/Icons/Biulding Creation/tile011.png")
 		$Elements/Water.texture_normal = inactiveButton
-		$Elements/Water/Sprite.texture = preload("res://Sprites/Icons/Biulding Creation/tile012.png")
+		$Elements/Water/Sprite.texture = preload("res://GearDefRep/Sprites/Icons/Biulding Creation/tile012.png")
 		$Elements/Wind.texture_normal = inactiveButton
-		$Elements/Wind/Sprite.texture = preload("res://Sprites/Icons/Biulding Creation/tile013.png")
+		$Elements/Wind/Sprite.texture = preload("res://GearDefRep/Sprites/Icons/Biulding Creation/tile013.png")
 		$Elements/Nature.texture_normal = inactiveButton
-		$Elements/Nature/Sprite.texture = preload("res://Sprites/Icons/Biulding Creation/tile014.png")
+		$Elements/Nature/Sprite.texture = preload("res://GearDefRep/Sprites/Icons/Biulding Creation/tile014.png")
 		$Elements/None.texture_normal = inactiveButton
-		$Elements/None/Sprite.texture = preload("res://Sprites/Icons/Biulding Creation/tile015.png")
+		$Elements/None/Sprite.texture = preload("res://GearDefRep/Sprites/Icons/Biulding Creation/tile015.png")
 
 func setActiveButtons():
 	if currentBase == 0:
@@ -49,19 +49,19 @@ func setActiveButtons():
 		$Bases/Full.texture_normal = activeButton
 	if currentElement == 0:
 		$Elements/None.texture_normal = activeButton
-		$Elements/None/Sprite.texture = preload("res://Sprites/Icons/Biulding Creation/tile010.png")
+		$Elements/None/Sprite.texture = preload("res://GearDefRep/Sprites/Icons/Biulding Creation/tile010.png")
 	elif currentElement == 1:
 		$Elements/Fire.texture_normal = activeButton
-		$Elements/Fire/Sprite.texture = preload("res://Sprites/Icons/Biulding Creation/tile006.png")
+		$Elements/Fire/Sprite.texture = preload("res://GearDefRep/Sprites/Icons/Biulding Creation/tile006.png")
 	elif currentElement == 2:
 		$Elements/Water.texture_normal = activeButton
-		$Elements/Water/Sprite.texture = preload("res://Sprites/Icons/Biulding Creation/tile007.png")
+		$Elements/Water/Sprite.texture = preload("res://GearDefRep/Sprites/Icons/Biulding Creation/tile007.png")
 	elif currentElement == 3:
 		$Elements/Wind.texture_normal = activeButton
-		$Elements/Wind/Sprite.texture = preload("res://Sprites/Icons/Biulding Creation/tile008.png")
+		$Elements/Wind/Sprite.texture = preload("res://GearDefRep/Sprites/Icons/Biulding Creation/tile008.png")
 	elif currentElement == 4:
 		$Elements/Nature.texture_normal = activeButton
-		$Elements/Nature/Sprite.texture = preload("res://Sprites/Icons/Biulding Creation/tile009.png")
+		$Elements/Nature/Sprite.texture = preload("res://GearDefRep/Sprites/Icons/Biulding Creation/tile009.png")
 
 func setCost(type, value):
 	if type == "DamageSlider":
