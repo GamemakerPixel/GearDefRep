@@ -39,10 +39,11 @@ func savePlaytestData():
 	var OStime = OS.get_time()
 	var time = str(OStime.hour) + "-" + str(OStime.minute)
 	var ComputerName = OS.get_name()
-	print(ComputerName)
 	var date = str(OSdate.month) + "_" + str(OSdate.day) + "_" + str(OSdate.year)
 	var version = ProjectSettings.get_setting("Application/version")
 	file.open("res://GearDefRep/PlaytesterData/" + ComputerName + "/playtest_data_" + version + "_" + date + "_" + time + ".txt", File.WRITE)
+	file.store_string(str(content))
+	file.store_line()
 	file.store_string(str(content))
 	file.close()
 func compileData():
