@@ -21,7 +21,6 @@ func _process(delta):
 	var usedCells = $FullEnv.get_used_cells()
 	var tileMousePos = Vector2(int(get_global_mouse_position().x * 1.5 / 32) - 1, int(get_global_mouse_position().y * 1.5 / 16)).rotated(deg2rad(-45)) #-26.565
 	var intTileMousePos = Vector2(int(tileMousePos.x), int(tileMousePos.y)) #11, 1
-	print(intTileMousePos)
 	mousedTileCoordinates = intTileMousePos
 	mousedTileType = $FullEnv.get_cell(mousedTileCoordinates.x, mousedTileCoordinates.y)
 	var _2DTilePos =  mousedTileCoordinates.rotated(deg2rad(45)) * Vector2(32 / 1.5, 16 / 1.5) + Vector2(32, 16)
@@ -31,6 +30,11 @@ func _process(delta):
 			if not towerCoordinates.has(_2DTilePos):
 				$Towers.placeTower($ControlPanel/ColorRect/Templates.templateInt, _2DTilePos)
 				towerCoordinates.append(_2DTilePos)
+	if Input.is_action_just_pressed("altClick"):
+		if GlobalVariables.mouseMode == 0:
+			if towerCoordinates.has(_2DTilePos):
+				towerCoordinates.remove(towerCoordinates.find(_2DTilePos))
+				$Towers.sellTower(_2DTilePos)
 	var highlightedTilePos = Vector2(int(get_global_mouse_position().x / 16) * 16, int(get_global_mouse_position().y / 16) * 16)
 
 func _spawnMonster(type):
