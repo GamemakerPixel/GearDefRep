@@ -13,10 +13,10 @@ func _on_Button_pressed():
 
 func selectButton(selected):
 	if selected:
-		texture = preload("res://Sprites/Icons/Biulding Creation/tile004.png")
+		texture = preload("res://GearDefRep/Sprites/Icons/Biulding Creation/tile004.png")
 		GlobalVariables.setMouseMode(1)
 	else:
-		texture = preload("res://Sprites/Icons/Biulding Creation/tile003.png")
+		texture = preload("res://GearDefRep/Sprites/Icons/Biulding Creation/tile003.png")
 
 func _process(delta):
 	if GlobalVariables.mouseMode == 0:
