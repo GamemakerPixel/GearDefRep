@@ -25,45 +25,45 @@ func enableTemplate(template):
 
 func calculateTexture(template):
 	if template[1] == 0 && template[0] == 0:
-		return preload("res://Sprites/Icons/Biulding Creation/TowerIcons/tile016.png")
+		return preload("res://GearDefRep/Sprites/Icons/Biulding Creation/TowerIcons/tile016.png")
 	elif template[1] == 0 && template[0] == 1:
-		return preload("res://Sprites/Icons/Biulding Creation/TowerIcons/tile017.png")
+		return preload("res://GearDefRep/Sprites/Icons/Biulding Creation/TowerIcons/tile017.png")
 	elif template[1] == 0 && template[0] == 2:
-		return preload("res://Sprites/Icons/Biulding Creation/TowerIcons/tile018.png")
+		return preload("res://GearDefRep/Sprites/Icons/Biulding Creation/TowerIcons/tile018.png")
 	elif template[1] == 0 && template[0] == 3:
-		return preload("res://Sprites/Icons/Biulding Creation/TowerIcons/tile019.png")
+		return preload("res://GearDefRep/Sprites/Icons/Biulding Creation/TowerIcons/tile019.png")
 	elif template[1] == 1 && template[0] == 0:
-		return preload("res://Sprites/Icons/Biulding Creation/TowerIcons/tile000.png")
+		return preload("res://GearDefRep/Sprites/Icons/Biulding Creation/TowerIcons/tile000.png")
 	elif template[1] == 1 && template[0] == 1:
-		return preload("res://Sprites/Icons/Biulding Creation/TowerIcons/tile001.png")
+		return preload("res://GearDefRep/Sprites/Icons/Biulding Creation/TowerIcons/tile001.png")
 	elif template[1] == 1 && template[0] == 2:
-		return preload("res://Sprites/Icons/Biulding Creation/TowerIcons/tile002.png")
+		return preload("res://GearDefRep/Sprites/Icons/Biulding Creation/TowerIcons/tile002.png")
 	elif template[1] == 1 && template[0] == 3:
-		return preload("res://Sprites/Icons/Biulding Creation/TowerIcons/tile003.png")
+		return preload("res://GearDefRep/Sprites/Icons/Biulding Creation/TowerIcons/tile003.png")
 	elif template[1] == 2 && template[0] == 0:
-		return preload("res://Sprites/Icons/Biulding Creation/TowerIcons/tile004.png")
+		return preload("res://GearDefRep/Sprites/Icons/Biulding Creation/TowerIcons/tile004.png")
 	elif template[1] == 2 && template[0] == 1:
-		return preload("res://Sprites/Icons/Biulding Creation/TowerIcons/tile005.png")
+		return preload("res://GearDefRep/Sprites/Icons/Biulding Creation/TowerIcons/tile005.png")
 	elif template[1] == 2 && template[0] == 2:
-		return preload("res://Sprites/Icons/Biulding Creation/TowerIcons/tile006.png")
+		return preload("res://GearDefRep/Sprites/Icons/Biulding Creation/TowerIcons/tile006.png")
 	elif template[1] == 2 && template[0] == 3:
-		return preload("res://Sprites/Icons/Biulding Creation/TowerIcons/tile007.png")
+		return preload("res://GearDefRep/Sprites/Icons/Biulding Creation/TowerIcons/tile007.png")
 	elif template[1] == 3 && template[0] == 0:
-		return preload("res://Sprites/Icons/Biulding Creation/TowerIcons/tile008.png")
+		return preload("res://GearDefRep/Sprites/Icons/Biulding Creation/TowerIcons/tile008.png")
 	elif template[1] == 3 && template[0] == 1:
-		return preload("res://Sprites/Icons/Biulding Creation/TowerIcons/tile009.png")
+		return preload("res://GearDefRep/Sprites/Icons/Biulding Creation/TowerIcons/tile009.png")
 	elif template[1] == 3 && template[0] == 2:
-		return preload("res://Sprites/Icons/Biulding Creation/TowerIcons/tile010.png")
+		return preload("res://GearDefRep/Sprites/Icons/Biulding Creation/TowerIcons/tile010.png")
 	elif template[1] == 3 && template[0] == 3:
-		return preload("res://Sprites/Icons/Biulding Creation/TowerIcons/tile011.png")
+		return preload("res://GearDefRep/Sprites/Icons/Biulding Creation/TowerIcons/tile011.png")
 	elif template[1] == 4 && template[0] == 0:
-		return preload("res://Sprites/Icons/Biulding Creation/TowerIcons/tile012.png")
+		return preload("res://GearDefRep/Sprites/Icons/Biulding Creation/TowerIcons/tile012.png")
 	elif template[1] == 4 && template[0] == 1:
-		return preload("res://Sprites/Icons/Biulding Creation/TowerIcons/tile013.png")
+		return preload("res://GearDefRep/Sprites/Icons/Biulding Creation/TowerIcons/tile013.png")
 	elif template[1] == 4 && template[0] == 2:
-		return preload("res://Sprites/Icons/Biulding Creation/TowerIcons/tile014.png")
+		return preload("res://GearDefRep/Sprites/Icons/Biulding Creation/TowerIcons/tile014.png")
 	elif template[1] == 4 && template[0] == 3:
-		return preload("res://Sprites/Icons/Biulding Creation/TowerIcons/tile015.png")
+		return preload("res://GearDefRep/Sprites/Icons/Biulding Creation/TowerIcons/tile015.png")
 
 func _on_template_selected(templateName):
 	if GlobalVariables.biuldingTemplates[int(templateName)][5] <= get_parent().get_node("Stats").money:
