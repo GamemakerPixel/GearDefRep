@@ -35,5 +35,5 @@ func savePlaytestData():
 	file.close()
 
 func compileData():
-	var CompPlaytime = round(playtime * 1000000000) / 1000000000
-	content.append("Total Play Frames: " + str(playtime) + str(" seconds"))
+	var CompPlaytime = round(playtime * 100) / 100
+	content.append("Total Play Frames: " + str(CompPlaytime) + str(" seconds"))
