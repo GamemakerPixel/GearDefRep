@@ -3,6 +3,7 @@ extends Node
 var content = []
 var playtime = 0
 var CompPlaytime = 0
+var templatesUtilized = PoolVector2Array()
 
 const DEFAULT_HEALTH = 100
 const DEFAULT_MONEY = 200
@@ -37,6 +38,5 @@ func savePlaytestData():
 	file.open("res://GearDefRep/PlaytesterData/playtest_data_" + version + "_" + date + ".txt", File.WRITE)
 	file.store_string(str(content))
 	file.close()
-
 func compileData():
 	content.append("Total Play Frames: " + str(CompPlaytime) + str(" seconds"))
