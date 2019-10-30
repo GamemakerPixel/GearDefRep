@@ -232,6 +232,7 @@ tracks/1/keys = {
 font_data = ExtResource( 8 )
 
 [sub_resource type="DynamicFont" id=10]
+size = 19
 font_data = ExtResource( 8 )
 
 [sub_resource type="StyleBoxEmpty" id=11]
@@ -470,11 +471,9 @@ texture_pressed = ExtResource( 12 )
 texture_hover = ExtResource( 13 )
 
 [node name="Templates" type="Node2D" parent="ControlPanel/ColorRect"]
-editor/display_folded = true
 script = ExtResource( 14 )
 
 [node name="Template0" type="Sprite" parent="ControlPanel/ColorRect/Templates"]
-editor/display_folded = true
 visible = false
 position = Vector2( 52, 172 )
 texture = ExtResource( 15 )
@@ -1154,6 +1153,7 @@ custom_styles/focus = SubResource( 11 )
 flat = true
 
 [node name="Stats" type="Node2D" parent="ControlPanel/ColorRect"]
+editor/display_folded = true
 script = ExtResource( 18 )
 
 [node name="Health" type="Label" parent="ControlPanel/ColorRect/Stats"]
