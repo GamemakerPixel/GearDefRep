@@ -232,7 +232,6 @@ tracks/1/keys = {
 font_data = ExtResource( 8 )
 
 [sub_resource type="DynamicFont" id=10]
-size = 19
 font_data = ExtResource( 8 )
 
 [sub_resource type="StyleBoxEmpty" id=11]
@@ -471,9 +470,11 @@ texture_pressed = ExtResource( 12 )
 texture_hover = ExtResource( 13 )
 
 [node name="Templates" type="Node2D" parent="ControlPanel/ColorRect"]
+editor/display_folded = true
 script = ExtResource( 14 )
 
 [node name="Template0" type="Sprite" parent="ControlPanel/ColorRect/Templates"]
+editor/display_folded = true
 visible = false
 position = Vector2( 52, 172 )
 texture = ExtResource( 15 )
@@ -1365,6 +1366,7 @@ margin_bottom = 336.0
 min_value = 1.0
 max_value = 20.0
 value = 2.0
+ticks_on_borders = true
 script = ExtResource( 31 )
 
 [node name="+" type="Button" parent="ControlPanel/CreateScreen/Sliders/DamageSlider"]
@@ -1388,7 +1390,7 @@ text = "-"
 flat = true
 
 [node name="Label" type="Label" parent="ControlPanel/CreateScreen/Sliders/DamageSlider"]
-margin_left = 9.53674e-07
+margin_left = 9.53674e-007
 margin_top = -12.6666
 margin_right = 261.0
 margin_bottom = 4.33337
@@ -1415,6 +1417,7 @@ margin_bottom = 336.0
 min_value = 1.0
 max_value = 4.0
 value = 3.0
+ticks_on_borders = true
 script = ExtResource( 31 )
 
 [node name="+" type="Button" parent="ControlPanel/CreateScreen/Sliders/SpeedSlider"]
