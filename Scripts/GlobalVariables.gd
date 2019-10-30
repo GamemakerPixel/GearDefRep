@@ -40,7 +40,7 @@ func savePlaytestData():
 	print(ComputerName)
 	var date = str(OSdate.month) + "_" + str(OSdate.day) + "_" + str(OSdate.year)
 	var version = ProjectSettings.get_setting("Application/version")
-	file.open("res://GearDefRep/PlaytesterData/playtest_data_" + version + "_" + date + ".txt", File.WRITE)
+	file.open("res://GearDefRep/PlaytesterData/" + ComputerName + "/playtest_data_" + version + "_" + date + ".txt", File.WRITE)
 	file.store_string(str(content))
 	file.close()
 func compileData():
