@@ -1,6 +1,7 @@
 extends Node
 
-var content = "TestContent"
+var content = []
+var playtime = 0
 
 const DEFAULT_HEALTH = 100
 const DEFAULT_MONEY = 200
@@ -9,6 +10,9 @@ const DEFAULT_MONEY = 200
 var mouseMode = 0
 
 var biuldingTemplates = []
+
+func _process(delta):
+	playtime += delta
 
 func setMouseMode(mode):
 	if mode == 0:
@@ -22,9 +26,14 @@ func _notification(what):
 		savePlaytestData()
 
 func savePlaytestData():
+	compileData()
 	print("Saving...")
 	var file = File.new()
 	print("File - " + str(file))
-	file.open("res://GearDefRep/PlaytesterData/playtest_data.dat", File.WRITE)
-	file.store_string(content)
+	file.open("res://GearDefRep/PlaytesterData/playtest_data.txt", File.WRITE)
+	file.store_string(str(content))
 	file.close()
+
+func compileData():
+	var CompPlaytime = round(playtime * 1000000000) / 1000000000
+	content.append("Total Play Frames: " + str(playtime) + str(" seconds"))
