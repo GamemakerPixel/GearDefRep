@@ -34,12 +34,11 @@ func _notification(what):
 
 func savePlaytestData():
 	compileData()
-	print("Saving...")
 	var file = File.new()
-	print("File - " + str(file))
-	var OSdate = OS.get_date() #ProjectSettings.get_setting("Application/play_test_date")
+	var OSdate = OS.get_date()
+	var ComputerName = OS.get_name()
+	print(ComputerName)
 	var date = str(OSdate.month) + "_" + str(OSdate.day) + "_" + str(OSdate.year)
-	print(date)
 	var version = ProjectSettings.get_setting("Application/version")
 	file.open("res://GearDefRep/PlaytesterData/playtest_data_" + version + "_" + date + ".txt", File.WRITE)
 	file.store_string(str(content))
