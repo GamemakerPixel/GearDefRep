@@ -474,7 +474,6 @@ texture_hover = ExtResource( 13 )
 script = ExtResource( 14 )
 
 [node name="Template0" type="Sprite" parent="ControlPanel/ColorRect/Templates"]
-editor/display_folded = true
 visible = false
 position = Vector2( 52, 172 )
 texture = ExtResource( 15 )
