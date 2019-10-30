@@ -1,9 +1,13 @@
 extends Node
 
+const PLAYTEST_MODE = true
+#Total Run Time, TowerTemplatesUsed
+const PLAYTEST_SPECIFICATIONS = [false, true]
+
 var content = []
 var playtime = 0
 var CompPlaytime = 0
-var templatesUtilized = PoolVector2Array()
+var templatesUtilized = []
 
 const DEFAULT_HEALTH = 100
 const DEFAULT_MONEY = 200
@@ -39,4 +43,8 @@ func savePlaytestData():
 	file.store_string(str(content))
 	file.close()
 func compileData():
-	content.append("Total Play Frames: " + str(CompPlaytime) + str(" seconds"))
+	if PLAYTEST_SPECIFICATIONS[0]:
+		content.append("Total Play Frames: " + str(CompPlaytime) + str(" seconds"))
+	if PLAYTEST_SPECIFICATIONS[1]:
+		for template in templatesUtilized:
+			content.append("Tower Created - " + str(template[0]) + " - at time " + str(template[1]))
