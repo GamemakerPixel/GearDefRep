@@ -367,7 +367,7 @@ position = Vector2( 288, 56 )
 _type = 3
 
 [node name="MonsterSpawner3" parent="MonsterSpawners" instance=ExtResource( 5 )]
-position = Vector2( 240, 256 )
+position = Vector2( 239, 255 )
 _type = 1
 
 [node name="MonsterSpawner4" parent="MonsterSpawners" instance=ExtResource( 5 )]
