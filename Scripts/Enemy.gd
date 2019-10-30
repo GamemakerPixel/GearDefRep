@@ -93,7 +93,4 @@ func calculateWorth():
 	var floatWorth = maxHealth * (speed / 10 / 2)
 	floatWorth *= 1.5
 	var intWorth = int(floatWorth)
-	print(maxHealth)
-	print(speed)
-	print(str(floatWorth) + " rounded worth to " + str(intWorth))
 	return intWorth
