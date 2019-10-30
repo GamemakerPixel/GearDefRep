@@ -381,7 +381,6 @@ position = Vector2( 608, 440 )
 script = ExtResource( 7 )
 
 [node name="ColorRect" type="ColorRect" parent="ControlPanel"]
-editor/display_folded = true
 margin_left = 912.0
 margin_right = 1041.0
 margin_bottom = 600.0
@@ -1465,6 +1464,7 @@ margin_bottom = 378.667
 min_value = 1.0
 max_value = 7.0
 value = 2.0
+ticks_on_borders = true
 script = ExtResource( 31 )
 
 [node name="+" type="Button" parent="ControlPanel/CreateScreen/Sliders/RangeSlider"]
