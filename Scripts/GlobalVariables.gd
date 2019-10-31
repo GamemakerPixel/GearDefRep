@@ -5,9 +5,18 @@ const PLAYTEST_MODE = true
 const PLAYTEST_SPECIFICATIONS = [true, true]
 
 var content = []
+#Overall Stats
 var playtime = 0
 var CompPlaytime = 0
+var amountTowersPlaced = 0
+var amountEnemiesKilled = 0
+#Specific Stats
 var templatesUtilized = []
+var enemiesKilled = []
+#Balancing Stats
+var strongestTower = []
+var strongestEnemy = []
+var mostUsedTower = []
 
 const DEFAULT_HEALTH = 100
 const DEFAULT_MONEY = 200
@@ -47,9 +56,14 @@ func savePlaytestData():
 func compileData():
 	if PLAYTEST_SPECIFICATIONS[0]:
 		content.append("Total Play Time: " + str(CompPlaytime) + str(" seconds"))
+		content.append("Total Towers: " + str(amountTowersPlaced))
+		content.append("Total Enemies Killed: " + str(amountEnemiesKilled))
 	if PLAYTEST_SPECIFICATIONS[1]:
 		if templatesUtilized.size() != 0:
 			for template in templatesUtilized:
 				content.append("Tower Created - " + str(template[0]) + " - at position - " + str(template[2]) + " - at time " + str(template[1]))
 		else:
 			content.append("Tower Created - null")
+		if enemiesKilled.size() != 0:
+			for enemy in enemiesKilled:
+				content.append("Enemy Killed: " + str(enemy))
