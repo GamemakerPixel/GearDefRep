@@ -1,0 +1,1 @@
+[Total Play Frames: 40.91 seconds, Tower Created - [1, 0, 2, 3, 3, 127] - at position - (559.973083, 325.241364) - at time 5.67, Tower Created - [1, 0, 2, 1, 1, 49] - at position - (499.63327, 249.816635) - at time 15.62, Tower Created - [1, 0, 2, 1, 1, 49] - at position - (544.888123, 272.444061) - at time 31.03]
