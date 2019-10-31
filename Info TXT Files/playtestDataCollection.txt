@@ -1,6 +1,10 @@
+OVERALL STATS
 [Playtime (Seconds)]
 [Total Towers Placed]
 [Total Enemies Killed]
 
+SPECIFIC STATS
 [Towers placed(template, position, time)]
 [Enemies killed(type, towerTemplate, time)]
+
+BALANCE STATS
