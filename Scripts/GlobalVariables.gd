@@ -42,7 +42,7 @@ func savePlaytestData():
 	var date = str(OSdate.month) + "_" + str(OSdate.day) + "_" + str(OSdate.year)
 	var version = ProjectSettings.get_setting("Application/version")
 	file.open("res://GearDefRep/PlaytesterData/" + ComputerName + "/playtest_data_" + version + "_" + date + "_" + time + ".txt", File.WRITE)
-	file.store_string(str(content))
+	file.store_string(to_json(content))
 	file.close()
 func compileData():
 	if PLAYTEST_SPECIFICATIONS[0]:
