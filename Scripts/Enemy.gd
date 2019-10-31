@@ -37,6 +37,8 @@ func _physics_process(delta):
 
 func attackCastle():
 	get_parent().get_parent().get_node("Castle").injureCastle(health)
+	if GlobalVariables.PLAYTEST_MODE:
+		GlobalVariables.strongestEnemy.append(type)
 	queue_free()
 
 func updateVisuals():
@@ -87,6 +89,8 @@ func takeDamage(damage):
 func die():
 	get_parent().get_parent().get_node("ControlPanel/ColorRect/Stats").add_to_stat("money", calculateWorth())
 	calculateWorth()
+	if GlobalVariables.PLAYTEST_MODE:
+		GlobalVariables.amountEnemiesKilled += 1
 	queue_free()
 
 func calculateWorth():
