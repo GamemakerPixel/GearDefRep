@@ -46,7 +46,7 @@ func savePlaytestData():
 	file.close()
 func compileData():
 	if PLAYTEST_SPECIFICATIONS[0]:
-		content.append("Total Play Frames: " + str(CompPlaytime) + str(" seconds"))
+		content.append("Total Play Time: " + str(CompPlaytime) + str(" seconds"))
 	if PLAYTEST_SPECIFICATIONS[1]:
 		if templatesUtilized.size() != 0:
 			for template in templatesUtilized:
