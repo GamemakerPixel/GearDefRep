@@ -21,7 +21,7 @@ func setData(_template, _position):
 		position = _position
 		readTemplate(template)
 	if GlobalVariables.PLAYTEST_MODE:
-		GlobalVariables.templatesUtilized.append([template, GlobalVariables.CompPlaytime])
+		GlobalVariables.templatesUtilized.append([template, GlobalVariables.CompPlaytime, _position])
 
 func readTemplate(template):
 	type = template[0]
