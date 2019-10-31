@@ -1,0 +1,6 @@
+[Playtime (Seconds)]
+[Total Towers Placed]
+[Total Enemies Killed]
+
+[Towers placed(template, position, time)]
+[Enemies killed(type, towerTemplate, time)]
