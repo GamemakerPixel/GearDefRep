@@ -43,8 +43,6 @@ func savePlaytestData():
 	var version = ProjectSettings.get_setting("Application/version")
 	file.open("res://GearDefRep/PlaytesterData/" + ComputerName + "/playtest_data_" + version + "_" + date + "_" + time + ".txt", File.WRITE)
 	file.store_string(str(content))
-	file.store_line()
-	file.store_string(str(content))
 	file.close()
 func compileData():
 	if PLAYTEST_SPECIFICATIONS[0]:
@@ -52,6 +50,6 @@ func compileData():
 	if PLAYTEST_SPECIFICATIONS[1]:
 		if templatesUtilized.size() != 0:
 			for template in templatesUtilized:
-				content.append("Tower Created - " + str(template[0]) + " - at time " + str(template[1]))
+				content.append("Tower Created - " + str(template[0]) + " - at position - " + str(template[2]) + " - at time " + str(template[1]))
 		else:
 			content.append("Tower Created - null")
