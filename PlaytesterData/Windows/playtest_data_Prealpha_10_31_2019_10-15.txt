@@ -1,0 +1,1 @@
+["Total Play Time: 14.87 seconds","Tower Created - [1, 0, 2, 1, 2, 63] - at position - (635.397827, 332.783844) - at time 11.02","Tower Created - [1, 0, 2, 1, 2, 63] - at position - (665.567627, 378.038666) - at time 13.01"]
