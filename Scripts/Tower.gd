@@ -22,6 +22,8 @@ func setData(_template, _position):
 		readTemplate(template)
 	if GlobalVariables.PLAYTEST_MODE:
 		GlobalVariables.templatesUtilized.append([template, GlobalVariables.CompPlaytime, _position])
+		GlobalVariables.amountTowersPlaced += 1
+		GlobalVariables.mostUsedTower.append(template)
 
 func readTemplate(template):
 	type = template[0]
