@@ -54,6 +54,7 @@ func savePlaytestData():
 	file.open("res://GearDefRep/PlaytesterData/" + ComputerName + "/playtest_data_" + version + "_" + date + "_" + time + ".txt", File.WRITE)
 	file.store_string(to_json(content))
 	file.close()
+
 func compileData():
 	if PLAYTEST_SPECIFICATIONS[0]:
 		content.append("Total Play Time: " + str(CompPlaytime) + str(" seconds"))
@@ -71,10 +72,13 @@ func compileData():
 	if PLAYTEST_SPECIFICATIONS[2]:
 		if templatesUsedOnly.size() > 0:
 			mostUsedTower = mode(templatesUsedOnly)
-			content.append("Most used tower(s) - " + str(mostUsedTower[0][0]) + " - used: " + str(mostUsedTower[1]))
+			removeDuplicates(mostUsedTower[0])
+			content.append("Most used tower(s) - " + str(mostUsedTower[0]) + " - used: " + str(mostUsedTower[1]))
 		if strongestEnemy.size() > 0:
 			strongestEnemy = mode(strongestEnemy)
-			content.append("Strongest Enemy - " + str(strongestEnemy[0][0]) + " _ suceeded: " + str(strongestEnemy[1]))
+			removeDuplicates(strongestEnemy[0])
+			content.append("Strongest Enemy - " + str(strongestEnemy[0]) + " _ suceeded: " + str(strongestEnemy[1]))
+
 func mode(Array_):
 	var mostUsedValue = []
 	var repitionOfValue = 0
@@ -87,3 +91,8 @@ func mode(Array_):
 		elif repitionOfValue == repition:
 			mostUsedValue.append(i)
 	return [mostUsedValue, repitionOfValue]
+
+func removeDuplicates(Array_):
+	for i in Array_:
+		while Array_.count(i) > 1:
+			Array_.remove(Array_.find(i))
