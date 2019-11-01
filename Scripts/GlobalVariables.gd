@@ -2,7 +2,7 @@ extends Node
 
 const PLAYTEST_MODE = true
 #Total Run Time, TowerTemplatesUsed
-const PLAYTEST_SPECIFICATIONS = [true, true]
+const PLAYTEST_SPECIFICATIONS = [true, false, true]
 
 var content = []
 #Overall Stats
@@ -12,11 +12,12 @@ var amountTowersPlaced = 0
 var amountEnemiesKilled = 0
 #Specific Stats
 var templatesUtilized = []
+var templatesUsedOnly = []
 var enemiesKilled = []
 #Balancing Stats
-var strongestTower = []
-var strongestEnemy = []
-var mostUsedTower = []
+var strongestTower = ["No Tower Attacks"]
+var strongestEnemy = ["No Successful Enemies"]
+var mostUsedTower = ["No Towers Used"]
 
 const DEFAULT_HEALTH = 100
 const DEFAULT_MONEY = 200
@@ -67,3 +68,22 @@ func compileData():
 		if enemiesKilled.size() != 0:
 			for enemy in enemiesKilled:
 				content.append("Enemy Killed: " + str(enemy))
+	if PLAYTEST_SPECIFICATIONS[2]:
+		if templatesUsedOnly.size() > 0:
+			mostUsedTower = mode(templatesUsedOnly)
+			content.append("Most used tower(s) - " + str(mostUsedTower[0][0]) + " - used: " + str(mostUsedTower[1]))
+		if strongestEnemy.size() > 0:
+			strongestEnemy = mode(strongestEnemy)
+			content.append("Strongest Enemy - " + str(strongestEnemy[0][0]) + " _ suceeded: " + str(strongestEnemy[1]))
+func mode(Array_):
+	var mostUsedValue = []
+	var repitionOfValue = 0
+	for i in Array_:
+		var repition = Array_.count(i)
+		if repition > repitionOfValue:
+			mostUsedValue.clear()
+			mostUsedValue.append(i)
+			repitionOfValue = repition
+		elif repitionOfValue == repition:
+			mostUsedValue.append(i)
+	return [mostUsedValue, repitionOfValue]
