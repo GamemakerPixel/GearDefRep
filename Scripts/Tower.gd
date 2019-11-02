@@ -79,6 +79,12 @@ func shoot():
 				target.takeDamage(damage)
 			can_shoot = false
 			$Cooldown.start()
+			if GlobalVariables.PLAYTEST_MODE:
+				if GlobalVariables.strongestTower != ["No Tower Attacks"]:
+					for tower in GlobalVariables.strongestTower:
+						if tower.has(template):
+							GlobalVariables.strongestTower[GlobalVariables.strongestTower.find(tower)][1] += damage
+						GlobalVariables.strongestTower.append([template, damage])
 
 func _on_Cooldown_timeout():
 	can_shoot = true
