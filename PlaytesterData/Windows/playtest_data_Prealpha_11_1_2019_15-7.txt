@@ -1,0 +1,1 @@
+["Total Play Time: 19.49 seconds","Total Towers: 1","Total Enemies Killed: 1","Most used tower(s) - [[1, 0, 2, 1, 1, 49]] - used: 1","Strongest Enemy - [No Successful Enemies] _ suceeded: 1"]
