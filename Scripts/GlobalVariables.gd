@@ -78,6 +78,18 @@ func compileData():
 			strongestEnemy = mode(strongestEnemy)
 			removeDuplicates(strongestEnemy[0])
 			content.append("Strongest Enemy - " + str(strongestEnemy[0]) + " _ suceeded: " + str(strongestEnemy[1]))
+		if strongestTower.size() > 0:
+			var currentStrongestTower = []
+			var highestDamage = 0
+			for tower in strongestTower:
+				if tower[1] > highestDamage:
+					currentStrongestTower.clear()
+					currentStrongestTower.append(tower)
+					highestDamage = tower[1]
+				elif tower[1] == highestDamage:
+					currentStrongestTower.append(tower)
+			strongestTower = currentStrongestTower
+			content.append("Strongest tower - " + str(strongestTower[0]) + " - with total damage - " + str(strongestTower[1]))
 
 func mode(Array_):
 	var mostUsedValue = []
