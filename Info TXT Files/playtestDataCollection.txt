@@ -8,3 +8,6 @@ SPECIFIC STATS
 [Enemies killed(type, towerTemplate, time)]
 
 BALANCE STATS
+[Strongest Tower(template, enemies killed)]
+[Strongest Enemy(got in castle)]
+[Most Used Tower(template, used amount)]
